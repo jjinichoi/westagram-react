@@ -1,4 +1,5 @@
-import "./Main.css";
+import React from "react";
+import "./Main.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMagnifyingGlass,
@@ -13,7 +14,7 @@ import {
 
 const Main = () => {
   return (
-    <>
+    <div className="Main">
       <header>
         <nav>
           <div className="containar">
@@ -120,15 +121,15 @@ const Main = () => {
 
                 <div className="commentsBox">
                   <ul>
-                    <li class="commentBox">
-                      <div class="left">
-                        <div class="commentId">abc</div>
-                        <div class="comment">너어무 기여워</div>
+                    <li className="commentBox">
+                      <div className="left">
+                        <div className="commentId">abc</div>
+                        <div className="comment">너어무 기여워</div>
                       </div>
 
-                      <div class="right">
-                        <button class="commentRemoveBtn">X</button>
-                        <button class="commentlikeBtn">
+                      <div className="right">
+                        <button className="commentRemoveBtn">X</button>
+                        <button className="commentlikeBtn">
                           <FontAwesomeIcon
                             icon={faHeart}
                             className="commentlike"
@@ -140,7 +141,12 @@ const Main = () => {
                 </div>
 
                 <form className="commentPost">
-                  <input required type="text" placeholder="댓글 달기..." />
+                  <input
+                    required
+                    type="text"
+                    placeholder="댓글 달기..."
+                    className="inputText"
+                  />
                   <button type="submit" className="submitBtn">
                     게시
                   </button>
@@ -236,7 +242,9 @@ const Main = () => {
                       dainzzl님 외 2명이 팔로우 합니다.
                     </div>
                   </div>
-                  <button type="submit">팔로우</button>
+                  <button type="submit" className="followBtn">
+                    팔로우
+                  </button>
                 </li>
                 <li>
                   <div className="recommendationImg"></div>
@@ -246,7 +254,9 @@ const Main = () => {
                       dainzzl님 외 2명이 팔로우 합니다.
                     </div>
                   </div>
-                  <button type="submit">팔로우</button>
+                  <button type="submit" className="followBtn">
+                    팔로우
+                  </button>
                 </li>
                 <li>
                   <div className="recommendationImg"></div>
@@ -256,7 +266,9 @@ const Main = () => {
                       dainzzl님 외 2명이 팔로우 합니다.
                     </div>
                   </div>
-                  <button type="submit">팔로우</button>
+                  <button type="submit" className="followBtn">
+                    팔로우
+                  </button>
                 </li>
               </ul>
             </div>
@@ -272,7 +284,7 @@ const Main = () => {
           </aside>
         </div>
       </main>
-    </>
+    </div>
   );
 };
 

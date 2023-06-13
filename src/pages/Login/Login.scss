@@ -1,0 +1,58 @@
+@import "../../styles/variables.scss";
+
+.loginBox {
+  width: 350px;
+  margin: 100px auto;
+  background: $white;
+  border: solid 1px $BoxborderDefaultColor;
+
+  .logo {
+    margin: 35px 0 50px 0;
+    font-family: "Lobster", cursive;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .loginInput form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+
+    input {
+      height: 40px;
+      background: #fafafa;
+      border: solid 1px $BoxborderDefaultColor;
+      border-radius: 3px;
+      margin-bottom: 5px;
+      padding-left: 10px;
+    }
+
+    & ::placeholder {
+      color: $InputDefaultColor;
+    }
+
+    & :focus {
+      outline: 1px solid $InputDefaultColor;
+    }
+  }
+
+  .loginBtn {
+    height: 35px;
+    background: #c4e0fb;
+    border: none;
+    border-radius: 5px;
+    color: $white;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .findPassword {
+    display: block;
+    text-align: center;
+    margin: 180px 0 30px 0;
+    text-decoration: none;
+    color: #033568;
+    font-size: 14px;
+  }
+}
